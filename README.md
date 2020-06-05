@@ -4,7 +4,7 @@
 * [Site Info Center 2](https://github.com/digitalbricks/siclight2) (recommended)
 * [Site Info Center 1](https://github.com/digitalbricks/siclight)
 
-Please note the setup process as described in the repositories if [Site Info Center 2](https://github.com/digitalbricks/siclight2) or [Site Info Center 1](https://github.com/digitalbricks/siclight).
+Please note the configuration process as described in the repositories if [Site Info Center 2](https://github.com/digitalbricks/siclight2) or [Site Info Center 1](https://github.com/digitalbricks/siclight).
 
 
 ### Currently supported CMS
