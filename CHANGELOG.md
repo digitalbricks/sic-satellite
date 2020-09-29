@@ -1,4 +1,10 @@
 # Changelog Satellite
+
+## v0.20
+**29.09.2020**
+* added SHOPWARE6() for Shopware 6,tested with 6.3.1.1
+---
+
 ## v0.19
 **07.02.2020**
 * added sat_LEPTON4() for LEPTON CMS since version 4,tested with 4.5.0

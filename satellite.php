@@ -36,7 +36,7 @@ $sat_secret = "YOUR_SECRET";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.19";
+$siteinfo['sat_ver'] = "0.20";
 
 /**
 * see CHANGELOG.md for changes history
@@ -87,8 +87,14 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
         case "STATIC":
             $siteinfo['sys_ver'] = "static";
             break;
-        case "SHOPWARE":
-            $siteinfo['sys_ver'] = sat_SHOPWARE();
+        case "SHOPWARE": // just for downwards compatibility
+            $siteinfo['sys_ver'] = sat_SHOPWARE5();
+            break;
+        case "SHOPWARE5":
+            $siteinfo['sys_ver'] = sat_SHOPWARE5();
+            break;
+        case "SHOPWARE6":
+            $siteinfo['sys_ver'] = sat_SHOPWARE6();
             break;
         case "PAGEKIT":
             $siteinfo['sys_ver'] = sat_PAGEKIT();
@@ -217,16 +223,30 @@ function sat_PAGEKIT(){
 
 
 /**
- * sat_SHOPWARE
+ * sat_SHOPWARE5
  * Gets version of Shopware since version 5
  */
-function sat_SHOPWARE(){
+function sat_SHOPWARE5(){
     require __DIR__ . '/autoload.php';
     $environment = getenv('SHOPWARE_ENV') ?: getenv('REDIRECT_SHOPWARE_ENV') ?: 'production';
     $kernel = new \Shopware\Kernel($environment, $environment !== 'production');
 
     return $kernel::VERSION;
 }
+
+/**
+ * sat_SHOPWARE6
+ * Gets version of Shopware since version 6
+ */
+function sat_SHOPWARE6(){
+    require_once('../vendor/composer/package-versions-deprecated/src/PackageVersions/Versions.php');
+    $versions = PackageVersions\Versions::VERSIONS;
+    if(isset($versions['shopware/core'])){
+        $segments = explode('@',$versions['shopware/core']);
+        return $segments[0];
+    }
+};
+
 
 /**
  * sat_LEPTON4

@@ -20,7 +20,7 @@ Please note the configuration process as described in the repositories of [Site 
 | MODX              | MODX Revolution                               | v0.6                              |
 | GETSIMPLE         | GetSimple CMS                                 | v0.7                              |
 | LEPTON24          | Lepton CMS, since version 2.4                 | v0.8                              |
-| SHOPWARE          | Shopware, since version 5                     | v0.9                              |
+| SHOPWARE5         | Shopware, since version 5                     | v0.9                              |
 | PAGEKIT           | Pagekit, since version 1                      | v0.9                              |
 | BLACKCAT          | BlackCat CMS, 1.x series                      | v0.10                             |
 | JOOMLA            | Joomla! CMS, tested with  3.6 & 3.8.2         | v0.11                             |
@@ -30,7 +30,8 @@ Please note the configuration process as described in the repositories of [Site 
 | PIWIK             | PIWIK / Matomo, tested with 3.9.1             | v0.16                             |
 | JTLSHOP           | JTL-Shop, tested with 4.06 Build 9            | v0.17                             |
 | MODIFIEDSHOP      | modified eCommerce Shop, tested with 2.0.3.0  | v0.18                             |
-| LEPTON4           | Lepton CMS, since version 4.x                 | v0.19                              |
+| LEPTON4           | Lepton CMS, since version 4.x                 | v0.19                             |
+| SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20                             |
 
 ## Configuration: Satellite 
 Place a copy of the `satellite.php` in the root directory of all your configured sites via FTP.  Update the `$sat_secret` in the satellite to the one you configured for the corresponding site in SIC (don’t use the same secret across all your sites!) and make sure the satellite has a function for your CMS (if not, read the section “Add further CMS functions to satellite”). You are done.
