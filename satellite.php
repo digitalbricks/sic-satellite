@@ -146,6 +146,7 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
 /**
  * sat_CONCRETE5
  * Gets version of Concrete5, tested with 8.1.0 and 8.2.1
+ * @since Version 0.12
  */
 function sat_CONCRETE5(){
     // NOTE: When using Concrete5 Version 5, you HAVE to
@@ -160,6 +161,7 @@ function sat_CONCRETE5(){
 /**
  * sat_JOOMLA
  * Gets version of Joomla! CMS, tested with 3.6 and 3.8.2
+ * @since Version 0.11
  */
 function sat_JOOMLA(){
     // needs to be defined
@@ -180,6 +182,7 @@ function sat_JOOMLA(){
  /**
  * sat_JOOMLA15
  * Gets version of legacy Joomla! CMS v1.5
+ * @since Version 0.13
  */
  function sat_JOOMLA15(){
     // needs to be defined
@@ -200,6 +203,7 @@ function sat_JOOMLA(){
 /**
  * sat_BLACKCAT
  * Gets version of BlackCat CMS, 1.x series
+ * @since Version 0.10
  */
 function sat_BLACKCAT(){
     require_once('config.php');
@@ -214,6 +218,7 @@ function sat_BLACKCAT(){
 /**
  * sat_PAGEKIT
  * Gets version of Pagekit since version 1
+ * @since Version 0.9
  */
 function sat_PAGEKIT(){
     // config file requires a `$path`, setting an empty path variable
@@ -228,6 +233,7 @@ function sat_PAGEKIT(){
 /**
  * sat_SHOPWARE5
  * Gets version of Shopware since version 5
+ * @since Version 0.9
  */
 function sat_SHOPWARE5(){
     require __DIR__ . '/autoload.php';
@@ -240,6 +246,7 @@ function sat_SHOPWARE5(){
 /**
  * sat_SHOPWARE6
  * Gets version of Shopware since version 6
+ * @since Version 0.20
  */
 function sat_SHOPWARE6(){
     require_once('../vendor/composer/package-versions-deprecated/src/PackageVersions/Versions.php');
@@ -254,6 +261,7 @@ function sat_SHOPWARE6(){
 /**
  * sat_LEPTON4
  * Gets version of LEPTON CMS since version 4.x
+ * @since Version 0.19
  */
 function sat_LEPTON4(){
     require_once(dirname(__FILE__).'/config/config.php');
@@ -265,6 +273,7 @@ function sat_LEPTON4(){
 /**
  * sat_LEPTON24
  * Gets version of LEPTON CMS since version 2.4
+ * @since Version 0.8
  */
 function sat_LEPTON24(){
     require_once('config.php');
@@ -279,6 +288,7 @@ function sat_LEPTON24(){
 /**
  * sat_LEPTON
  * Gets version of LEPTON CMS
+ * @since Version 0.1
  */
 function sat_LEPTON(){
     require_once('config.php');
@@ -304,6 +314,7 @@ function sat_LEPTON(){
 /**
  * sat_WB
  * Gets version of WebsiteBaker CMS
+ * @since Version 0.2
  */
 function sat_WB(){
   require_once('config.php');
@@ -348,6 +359,7 @@ function sat_WB(){
 /**
  * sat_WORDPRESS
  * Gets version of WordPress
+ * @since Version 0.3
  */
 function sat_WORDPRESS(){
   require_once('wp-includes/version.php');
@@ -357,6 +369,7 @@ function sat_WORDPRESS(){
 /**
  * sat_WBCE
  * Gets version of WebsiteBaker Community Edition
+ * @since Version 0.4
  */
 function sat_WBCE(){
     // connect to db
@@ -380,6 +393,7 @@ function sat_WBCE(){
 /**
  * sat_PROCESSWIRE
  * Gets version of ProcessWire
+ * @since Version 0.5
  */
 function sat_PROCESSWIRE(){
   // loading the API
@@ -390,6 +404,7 @@ function sat_PROCESSWIRE(){
 /**
  * sat_MODX
  * Gets version of MODX Revolution
+ * @since Version 0.6
  */
 function sat_MODX(){
   // loading MODX
@@ -407,6 +422,7 @@ function sat_MODX(){
 /**
  * sat_GETSIMPLE
  * Gets version of GetSimple CMS
+ * @since Version 0.7
  */
 function sat_GETSIMPLE(){
     define("IN_GS",true);
@@ -418,6 +434,7 @@ function sat_GETSIMPLE(){
 /**
  * sat_NEXTCLOUD
  * Gets version of NextCloud
+ * @since Version 0.15
  */
 function sat_NEXTCLOUD(){
     require_once('version.php');
@@ -427,6 +444,7 @@ function sat_NEXTCLOUD(){
 /**
  * sat_PIWIK
  * Gets version of PIWIK / Matomo
+ * @since Version 0.16
  */
 function sat_PIWIK(){
     require_once('core/Version.php');
@@ -437,6 +455,7 @@ function sat_PIWIK(){
 /**
  * sat_JTLSHOP
  * Gets version of JTL-Shop
+ * @since Version 0.17
  */
 function sat_JTLSHOP(){
     require_once('includes/defines_inc.php');
@@ -446,6 +465,7 @@ function sat_JTLSHOP(){
 /**
  * sat_MODIFIEDSHOP
  * Gets version of modified eCommerce Shop
+ * @since Version 0.18
  */
 function sat_MODIFIEDSHOP(){
     require_once('admin/includes/version.php');
@@ -454,8 +474,8 @@ function sat_MODIFIEDSHOP(){
 
 /**
  * sat_MOODLE
- * @since Version 0.21
  * Gets version of modified Moodle e-learning plattform
+ * @since Version 0.21
  */
 function sat_MOODLE(){
     define('MOODLE_INTERNAL',true);

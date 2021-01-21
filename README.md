@@ -32,6 +32,7 @@ Please note the configuration process as described in the repositories of [Site 
 | MODIFIEDSHOP      | modified eCommerce Shop, tested with 2.0.3.0  | v0.18                             |
 | LEPTON4           | Lepton CMS, since version 4.x                 | v0.19                             |
 | SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20                             |
+| MOODLE            | Moodle, tested with 3.10.1                    | v0.21                             |
 
 ## Configuration: Satellite 
 Place a copy of the `satellite.php` in the root directory of all your configured sites via FTP.  Update the `$sat_secret` in the satellite to the one you configured for the corresponding site in SIC (don’t use the same secret across all your sites!) and make sure the satellite has a function for your CMS (if not, read the section “Add further CMS functions to satellite”). You are done.
