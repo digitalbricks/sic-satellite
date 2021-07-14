@@ -35,7 +35,7 @@ Please note the configuration process as described in the repositories of [Site 
 | MOODLE            | Moodle, tested with 3.10.1                    | v0.21                             |
 
 **Notes:**
-* *<sup>1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at leas v0.22 if you encountered that issue.
+* *<sup>1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at least v0.22 if you encountered that issue.
 
 ## Configuration: Satellite 
 Place a copy of the `satellite.php` in the root directory of all your configured sites via FTP.  Update the `$sat_secret` in the satellite to the one you configured for the corresponding site in SIC (don’t use the same secret across all your sites!) and make sure the satellite has a function for your CMS (if not, read the section “Add further CMS functions to satellite”). You are done.
