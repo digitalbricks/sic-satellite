@@ -36,7 +36,7 @@ $sat_secret = "YOUR_SECRET";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.21";
+$siteinfo['sat_ver'] = "0.22";
 
 /**
 * see CHANGELOG.md for changes history
@@ -240,7 +240,8 @@ function sat_SHOPWARE5(){
     $environment = getenv('SHOPWARE_ENV') ?: getenv('REDIRECT_SHOPWARE_ENV') ?: 'production';
     $kernel = new \Shopware\Kernel($environment, $environment !== 'production');
 
-    return $kernel::VERSION;
+    $releaseinfo = $kernel->getRelease();
+    return $releaseinfo['version'];
 }
 
 /**

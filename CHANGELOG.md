@@ -1,5 +1,10 @@
 # Changelog Satellite
 
+## v0.21
+**14.07.2021**
+* fixed fuction for Shopware 5, tested with 5.7.2
+---
+
 ## v0.20
 **29.09.2020**
 * added SHOPWARE6() for Shopware 6,tested with 6.3.1.1
