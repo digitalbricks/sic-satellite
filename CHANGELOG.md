@@ -1,4 +1,8 @@
 # Changelog Satellite
+## v0.23
+**17.09.2021**
+* added sat_JTLSHOP_5() for JTL Shop 5, tested with 5.1.0
+---
 
 ## v0.21
 **14.07.2021**
@@ -7,7 +11,7 @@
 
 ## v0.20
 **29.09.2020**
-* added SHOPWARE6() for Shopware 6,tested with 6.3.1.1
+* added sat_SHOPWARE6() for Shopware 6,tested with 6.3.1.1
 ---
 
 ## v0.19

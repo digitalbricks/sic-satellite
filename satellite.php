@@ -36,7 +36,7 @@ $sat_secret = "YOUR_SECRET";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.22";
+$siteinfo['sat_ver'] = "0.23";
 
 /**
 * see CHANGELOG.md for changes history
@@ -87,7 +87,7 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
         case "STATIC":
             $siteinfo['sys_ver'] = "static";
             break;
-        case "SHOPWARE": // just for downwards compatibility
+        case "SHOPWARE": // just for backwards compatibility
             $siteinfo['sys_ver'] = sat_SHOPWARE5();
             break;
         case "SHOPWARE5":
@@ -117,12 +117,18 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
         case "PIWIK":
             $siteinfo['sys_ver'] = sat_PIWIK();
             break;
-        case "JTLSHOP":
-            $siteinfo['sys_ver'] = sat_JTLSHOP();
+        case "JTLSHOP": // just for backwards compatibility
+            $siteinfo['sys_ver'] = sat_JTLSHOP4();
+            break;
+        case "JTLSHOP4":
+            $siteinfo['sys_ver'] = sat_JTLSHOP4();
+            break;
+        case "JTLSHOP5":
+            $siteinfo['sys_ver'] = sat_JTLSHOP5();
             break; 
         case "MODIFIEDSHOP":
-                $siteinfo['sys_ver'] = sat_MODIFIEDSHOP();
-                break; 
+            $siteinfo['sys_ver'] = sat_MODIFIEDSHOP();
+            break; 
         case "MOODLE":
             $siteinfo['sys_ver'] = sat_MOODLE();
             break; 
@@ -454,13 +460,24 @@ function sat_PIWIK(){
 }
 
 /**
- * sat_JTLSHOP
- * Gets version of JTL-Shop
+ * sat_JTLSHOP4
+ * Gets version of JTL-Shop 4
  * @since Version 0.17
  */
-function sat_JTLSHOP(){
+function sat_JTLSHOP4(){
     require_once('includes/defines_inc.php');
     return (JTL_VERSION / 100)." (Build: ".JTL_MINOR_VERSION.")";
+}
+
+/**
+ * sat_JTLSHOP5
+ * Gets version of JTL-Shop 5
+ * @since Version 0.23
+ */
+function sat_JTLSHOP5(){
+    define('PFAD_LOGFILES',false);
+    require_once('includes/defines_inc.php');
+    return APPLICATION_VERSION;
 }
 
 /**

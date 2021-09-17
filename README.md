@@ -28,11 +28,12 @@ Please note the configuration process as described in the repositories of [Site 
 | JOOMLA15          | legacy Joomla! CMS v1.5                       | v0.13                             |
 | NEXTCLOUD         | NextCloud                                     | v0.15                             |
 | PIWIK             | PIWIK / Matomo, tested with 3.9.1             | v0.16                             |
-| JTLSHOP           | JTL-Shop, tested with 4.06 Build 9            | v0.17                             |
+| JTLSHOP4          | JTL-Shop 4, tested with 4.06 Build 9          | v0.17                             |
 | MODIFIEDSHOP      | modified eCommerce Shop, tested with 2.0.3.0  | v0.18                             |
 | LEPTON4           | Lepton CMS, since version 4.x                 | v0.19                             |
 | SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20                             |
 | MOODLE            | Moodle, tested with 3.10.1                    | v0.21                             |
+| JTLSHOP5          | JTL-Shop 5, tested with 5.1.0                 | v0.23                             |
 
 **Notes:**
 * *<sup>1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at least v0.22 if you encountered that issue.
