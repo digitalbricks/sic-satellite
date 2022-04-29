@@ -20,7 +20,7 @@ Please note the configuration process as described in the repositories of [Site 
 | MODX              | MODX Revolution                               | v0.6                              |
 | GETSIMPLE         | GetSimple CMS                                 | v0.7                              |
 | LEPTON24          | Lepton CMS, since version 2.4                 | v0.8                              |
-| SHOPWARE5         | Shopware, since version 5                     | v0.9*<sup>1</sup>                              |
+| SHOPWARE5         | Shopware, since version 5                     | v0.9<sup>*1</up>                  |
 | PAGEKIT           | Pagekit, since version 1                      | v0.9                              |
 | BLACKCAT          | BlackCat CMS, 1.x series                      | v0.10                             |
 | JOOMLA            | Joomla! CMS, tested with  3.6 & 3.8.2         | v0.11                             |
@@ -31,12 +31,13 @@ Please note the configuration process as described in the repositories of [Site 
 | JTLSHOP4          | JTL-Shop 4, tested with 4.06 Build 9          | v0.17                             |
 | MODIFIEDSHOP      | modified eCommerce Shop, tested with 2.0.3.0  | v0.18                             |
 | LEPTON4           | Lepton CMS, since version 4.x                 | v0.19                             |
-| SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20                             |
+| SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20<sup>*2</up>                 |
 | MOODLE            | Moodle, tested with 3.10.1                    | v0.21                             |
 | JTLSHOP5          | JTL-Shop 5, tested with 5.1.0                 | v0.23                             |
 
 **Notes:**
-* *<sup>1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at least v0.22 if you encountered that issue.
+* <sup>*1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at least v0.22 if you encountered that issue.
+* <sup>*2</sup> Function for Shopware 6 had a bug until v0.24 of the satellite where a wrong version number was returned. This issue was addressed in v0.24 but – as you can see in my track-record concering shopware satellite functions for Shopware – i may be wrong. Please double check the results with the version number displayed in SW 6 admin.
 
 ## Configuration: Satellite 
 Place a copy of the `satellite.php` in the root directory of all your configured sites via FTP.  Update the `$sat_secret` in the satellite to the one you configured for the corresponding site in SIC (don’t use the same secret across all your sites!) and make sure the satellite has a function for your CMS (if not, read the section “Add further CMS functions to satellite”). You are done.

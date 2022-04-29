@@ -36,7 +36,7 @@ $sat_secret = "YOUR_SECRET";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.23";
+$siteinfo['sat_ver'] = "0.24";
 
 /**
 * see CHANGELOG.md for changes history
@@ -253,15 +253,12 @@ function sat_SHOPWARE5(){
 /**
  * sat_SHOPWARE6
  * Gets version of Shopware since version 6
- * @since Version 0.20
+ * @since Version 0.20, updated in 0.24
  */
 function sat_SHOPWARE6(){
-    require_once('../vendor/composer/package-versions-deprecated/src/PackageVersions/Versions.php');
-    $versions = PackageVersions\Versions::VERSIONS;
-    if(isset($versions['shopware/core'])){
-        $segments = explode('@',$versions['shopware/core']);
-        return $segments[0];
-    }
+    require __DIR__ . '/../vendor/autoload.php';
+    $version = \Composer\InstalledVersions::getVersion('shopware/core');
+    return $version;
 };
 
 

@@ -1,4 +1,9 @@
 # Changelog Satellite
+## v0.24
+**29.04.2022**
+* modified sat_SHOPWARE6() for Shopware 6,tested with 6.10.1 – note that the function introduced in v0.20 does NOT return the correct version!
+---
+
 ## v0.23
 **17.09.2021**
 * added sat_JTLSHOP_5() for JTL Shop 5, tested with 5.1.0
