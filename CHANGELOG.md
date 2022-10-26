@@ -1,4 +1,9 @@
 # Changelog Satellite
+## v0.25
+**26.10.2022**
+* modified sat_PROCESSWIRE() for adding a debug mode hint "(Debug ON)" to sys_ver if ProcessWire debug mode is on beacuse this may be a security risk
+---
+
 ## v0.24
 **29.04.2022**
 * modified sat_SHOPWARE6() for Shopware 6,tested with 6.10.1 – note that the function introduced in v0.20 does NOT return the correct version!

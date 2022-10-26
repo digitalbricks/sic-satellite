@@ -36,7 +36,7 @@ $sat_secret = "YOUR_SECRET";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.24";
+$siteinfo['sat_ver'] = "0.25";
 
 /**
 * see CHANGELOG.md for changes history
@@ -402,7 +402,14 @@ function sat_WBCE(){
 function sat_PROCESSWIRE(){
   // loading the API
   require_once('index.php');
-  return $wire->config->version;
+  $version = $wire->config->version;
+
+  // check if Debug-Mode is ON
+  // and if so, give a hint to SIC
+  if($wire->config->debug){
+      $version.= " (Debug ON)";
+  }
+  return $version;
 }
 
 /**
