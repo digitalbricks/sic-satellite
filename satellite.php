@@ -406,8 +406,8 @@ function sat_PROCESSWIRE(){
 
   // check if Debug-Mode is ON
   // and if so, give a hint to SIC
-  if($wire->config->debug){
-      $version.= " (Debug ON)";
+  if($wire->config->debug===true){
+    $version.= " (Debug ON)";
   }
   return $version;
 }
