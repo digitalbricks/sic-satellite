@@ -23,20 +23,23 @@
  * technischen Status Ihrer Website im Blick zu behalten.
  * Falls Sie Fragen zu dieser Datei haben, zögern Sie nicht den
  * unten benannten Administrator Ihrer Site zu befragen.
+ * 
+ * 
+ * [YOUR_CONTACT_INFORMATION]
  *
 */
 
 
 /*--- SETUP -------------------------------------------------*/
 // shared secret, matching the value defined in SIC site_config
-$sat_secret = "YOUR_SECRET";
+$sat_secret = "[YOUR_SECRET]";
 
 
 
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.25";
+$siteinfo['sat_ver'] = "0.26";
 
 /**
 * see CHANGELOG.md for changes history

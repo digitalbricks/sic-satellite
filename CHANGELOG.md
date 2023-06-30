@@ -1,4 +1,9 @@
 # Changelog Satellite
+## v0.26
+**30.06.2023**
+* added placeholders [YOUR_CONTACT_INFORMATION] and [YOUR_SECRET] wich can be auto-populated when generating a personalized satellite file using the SIC 3 interface (in development)
+---
+
 ## v0.25
 **26.10.2022**
 * modified sat_PROCESSWIRE() for adding a debug mode hint "(Debug ON)" to sys_ver if ProcessWire debug mode is on beacuse this may be a security risk
