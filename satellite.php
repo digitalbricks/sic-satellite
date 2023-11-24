@@ -39,7 +39,7 @@ $sat_secret = "[YOUR_SECRET]";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.26";
+$siteinfo['sat_ver'] = "0.27";
 
 /**
 * see CHANGELOG.md for changes history
@@ -50,6 +50,37 @@ $siteinfo['php_ver'] = phpversion();
 
 // check if he got valid data
 if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_POST['secret']!=''){
+
+/**
+* Currently supported systems
+* NOTE: This list is parsed by the SIC, so please keep the format as it is and
+*       update if new systems were added.
+* 
+* sys=LEPTON4       | Lepton CMS, since version 4.x
+* sys=LEPTON24      | Lepton CMS, since version 2.4
+* sys=LEPTON        | Lepton CMS, below version 2.4
+* sys=MODX          | MODX Revolution CMS
+* sys=WORDPRESS     | WordPress CMS
+* sys=WEBSITEBAKER  | WebsiteBaker CMS
+* sys=WBCE          | WBCE CMS
+* sys=GETSIMPLE     | GetSimple CMS
+* sys=PROCESSWIRE   | ProcessWire CMS/CMF
+* sys=STATIC        | Static PHP Website
+* sys=SHOPWARE5     | Shopware 5
+* sys=SHOPWARE6     | Shopware 6
+* sys=PAGEKIT       | Pagekit CMS
+* sys=BLACKCAT      | BlackCat CMS
+* sys=JOOMLA        | Joomla! CMS
+* sys=JOOMLA15      | Joomla! CMS, legacy version 1.5
+* sys=CONCRETE5     | Concrete5 CMS
+* sys=NEXTCLOUD     | NextCloud
+* sys=PIWIK         | Matomo / Piwik
+* sys=JTLSHOP4      | JTL-Shop 4
+* sys=JTLSHOP5      | JTL-Shop 5
+* sys=MODIFIEDSHOP  | modified eCommerce Shop
+* sys=MOODLE        | Moodle e-learning plattform
+*
+*/
 
  // check if secret was correct
  if($sat_secret != $_POST['secret']){

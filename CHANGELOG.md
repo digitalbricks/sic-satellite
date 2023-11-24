@@ -1,4 +1,8 @@
 # Changelog Satellite
+## v0.27
+**24.11.2023**
+* added availabe system identifiers in PHP comment to be parsed by SIC3
+
 ## v0.26
 **30.06.2023**
 * added placeholders [YOUR_CONTACT_INFORMATION] and [YOUR_SECRET] wich can be auto-populated when generating a personalized satellite file using the SIC 3 interface (in development)
