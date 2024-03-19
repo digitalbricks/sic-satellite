@@ -39,7 +39,7 @@ $sat_secret = "[YOUR_SECRET]";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "0.27";
+$siteinfo['sat_ver'] = "1.0.0";
 
 /**
 * see CHANGELOG.md for changes history
@@ -50,6 +50,15 @@ $siteinfo['php_ver'] = phpversion();
 
 // check if he got valid data
 if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_POST['secret']!=''){
+
+    // check if phpinfo() request in POST action
+    if(isset($_POST['action']) AND $_POST['action'] == "PHPINFO"){
+        ob_start();
+        phpinfo();
+        $phpinfo = ob_get_clean();
+        echo $phpinfo;
+        exit;
+    }
 
 /**
 * Currently supported systems
