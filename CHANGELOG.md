@@ -1,4 +1,8 @@
 # Changelog Satellite
+## v1.0.0
+* added ability to return phpinfo() if requested by SIC3
+* switched to semver
+
 ## v0.27
 **24.11.2023**
 * added availabe system identifiers in PHP comment to be parsed by SIC3
