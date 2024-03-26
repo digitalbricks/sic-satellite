@@ -39,7 +39,7 @@ $sat_secret = "[YOUR_SECRET]";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "1.1.0";
+$siteinfo['sat_ver'] = "1.2.0";
 
 /**
 * see CHANGELOG.md for changes history
@@ -89,6 +89,7 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
 * sys=MODIFIEDSHOP  | modified eCommerce Shop
 * sys=MOODLE        | Moodle e-learning plattform
 * sys=PHPLIST       | phpList Email Marketing 
+* sys=TYPO3         | TYPO3 CMS 
 *
 */
 
@@ -178,6 +179,9 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
             break; 
         case "PHPLIST":
             $siteinfo['sys_ver'] = sat_PHPLIST();
+            break;
+        case "TYPO3":
+            $siteinfo['sys_ver'] = sat_TYPO3();
             break; 
         default:
             http_response_code(400);
@@ -566,4 +570,16 @@ function sat_PHPLIST(){
     if(defined('VERSION')){
         return VERSION;
     }
+}
+
+/**
+ * sat_TYPO3
+ * Gets version of TYPO3 CMS
+ * @since Version 1.2.0
+ */
+function sat_TYPO3(){
+    if(!file_exists('typo3/sysext/core/Classes/Information/Typo3Version.php')) return;
+    include('typo3/sysext/core/Classes/Information/Typo3Version.php');
+    $t3version = new \TYPO3\CMS\Core\Information\Typo3Version();
+    return $t3version->getVersion(); 
 }

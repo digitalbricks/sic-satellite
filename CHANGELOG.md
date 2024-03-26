@@ -1,4 +1,7 @@
 # Changelog Satellite
+## v1.2.0
+* added sat_TYPO3() for TYPO3, tested with 12.4.13
+
 ## v1.1.0
 * added sat_PHPLIST() for phpList, tested with 3.6.14
 
