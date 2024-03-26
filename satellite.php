@@ -39,7 +39,7 @@ $sat_secret = "[YOUR_SECRET]";
 /*--- SATELLITE (no need for changes)------------------------*/
 // satellite version: The current version of the satellite
 // Will be displayed in your SIC
-$siteinfo['sat_ver'] = "1.0.0";
+$siteinfo['sat_ver'] = "1.1.0";
 
 /**
 * see CHANGELOG.md for changes history
@@ -88,6 +88,7 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
 * sys=JTLSHOP5      | JTL-Shop 5
 * sys=MODIFIEDSHOP  | modified eCommerce Shop
 * sys=MOODLE        | Moodle e-learning plattform
+* sys=PHPLIST       | phpList Email Marketing 
 *
 */
 
@@ -174,6 +175,9 @@ if(isset($_POST['sys']) AND isset($_POST['secret']) AND $_POST['sys']!='' AND $_
             break; 
         case "MOODLE":
             $siteinfo['sys_ver'] = sat_MOODLE();
+            break; 
+        case "PHPLIST":
+            $siteinfo['sys_ver'] = sat_PHPLIST();
             break; 
         default:
             http_response_code(400);
@@ -546,4 +550,20 @@ function sat_MOODLE(){
     define('MOODLE_INTERNAL',true);
     require_once 'version.php';
     return $release;
+}
+
+/**
+ * sat_PHPLIST
+ * Gets version of phpList Email marketing / newsletter system
+ * @since Version 1.1.0
+ */
+function sat_PHPLIST(){
+    if(file_exists('lists/admin/init.php')){
+        include_once 'lists/admin/init.php';
+    } elseif(file_exists('lists/admin/about.php')){
+        include_once 'admin/init.php';
+    }
+    if(defined('VERSION')){
+        return VERSION;
+    }
 }

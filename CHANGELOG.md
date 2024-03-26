@@ -1,4 +1,7 @@
 # Changelog Satellite
+## v1.1.0
+* added sat_PHPLIST() for phpList, tested with 3.6.14
+
 ## v1.0.0
 * added ability to return phpinfo() if requested by SIC3
 * switched to semver

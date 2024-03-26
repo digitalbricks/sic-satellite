@@ -34,6 +34,7 @@ Please note the configuration process as described in the repositories of [Site 
 | SHOPWARE6         | Shopware, since version 6, tested with 6.3.1.1| v0.20<sup>*2</up>                 |
 | MOODLE            | Moodle, tested with 3.10.1                    | v0.21                             |
 | JTLSHOP5          | JTL-Shop 5, tested with 5.1.0                 | v0.23                             |
+| PHPLIST           | phpList, tested with 3.6.14                   | v1.1.0                            |
 
 **Notes:**
 * <sup>*1</sup> Function for Shopware 5 had a bug until v0.22 of the satellite where a wrong version number was returned for Shopware 5.6.x and above. Please consider upgrading the satellite to at least v0.22 if you encountered that issue.
